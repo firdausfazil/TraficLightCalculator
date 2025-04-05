@@ -82,13 +82,13 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.tlcalculator"
+    namespace 'com.firdausfazil.tlcalculator'
     defaultConfig {
-        applicationId "com.tlcalculator"
+        applicationId 'com.firdausfazil.tlcalculator'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
     }
     signingConfigs {
         debug {

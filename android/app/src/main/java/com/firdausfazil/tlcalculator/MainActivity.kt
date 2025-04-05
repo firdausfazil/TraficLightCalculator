@@ -1,4 +1,4 @@
-package com.tlcalculator
+package com.firdausfazil.tlcalculator
 import expo.modules.ReactActivityDelegateWrapper
 
 import com.facebook.react.ReactActivity

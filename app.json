@@ -2,6 +2,12 @@
   "name": "TLCalculator",
   "displayName": "TLCalculator",
   "expo": {
-    "entryPoint": "./index.js"
+    "entryPoint": "./index.js",
+    "android": {
+      "package": "com.firdausfazil.tlcalculator"
+    },
+    "ios": {
+      "bundleIdentifier": "com.firdausfazil.tlcalculator"
+    }
   }
 }

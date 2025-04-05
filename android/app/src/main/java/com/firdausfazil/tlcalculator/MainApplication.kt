@@ -1,4 +1,4 @@
-package com.tlcalculator
+package com.firdausfazil.tlcalculator
 import android.content.res.Configuration
 import expo.modules.ApplicationLifecycleDispatcher
 import expo.modules.ReactNativeHostWrapper
