@@ -38,24 +38,30 @@ const QuizData = [
   },
   {
     id: 6,
+    question: `Apakah yang dimaksudkan dengan sistem lampu isyarat berfasa dan apakah dua manfaat utamanya dalam mengawal aliran trafik?`,
+    options: ['Kaedah pengawalan trafik yang membahagikan pergerakan kenderaan dan pejalan kaki kepada beberapa fasa bagi mengelakkan konflik', 'Mengurangkan risiko perlanggaran di persimpangan', 'Menghapuskan keperluan had laju di kawasan persimpangan', 'Menyebabkan kesesakan lalu lintas di semua arah'],
+    answer: 'Kaedah pengawalan trafik yang membahagikan pergerakan kenderaan dan pejalan kaki kepada beberapa fasa bagi mengelakkan konflik',
+  },
+  {
+    id: 7,
     question: `Sebuah persimpangan dikawal oleh lampu isyarat tiga fasa dengan tempoh kitaran sebanyak 90 saat. Jika tempoh hijau untuk Fasa 1 adalah 35 saat, tempoh hijau untuk Fasa 2 adalah 30 saat, hitung tempoh baki untuk Fasa 3.`,
     options: ['20 saat', '25 saat', '30 saat', '35 saat'],
     answer: '25 saat',
   },
   {
-    id: 7,
+    id: 8,
     question: `Jika kadar aliran trafik bagi satu lorong adalah 600 kenderaan/jam dan tempoh hijau yang diperuntukkan ialah 30 saat, hitung jumlah maksimum kenderaan yang dapat melalui persimpangan dalam satu tempoh hijau.`,
     options: ['3 kenderaan', '5 kenderaan', '10 kenderaan', '15 kenderaan'],
     answer: '5 kenderaan',
   },
   {
-    id: 8,
+    id: 9,
     question: `Sebuah persimpangan dikawal dengan lampu isyarat dua fasa. Jika jumlah trafik masuk bagi Fasa A ialah 900 kenderaan/jam dan bagi Fasa B ialah 700 kenderaan/jam, hitung peratusan pembahagian masa hijau yang optimum untuk setiap fasa supaya aliran trafik seimbang.`,
     options: ['56.25% untuk Fasa A, 43.75% untuk Fasa B', '50% untuk Fasa A, 50% untuk Fasa B', '60% untuk Fasa A, 40% untuk Fasa B', '45% untuk Fasa A, 55% untuk Fasa B'],
     answer: '56.25% untuk Fasa A, 43.75% untuk Fasa B',
   },
   {
-    id: 9,
+    id: 10,
     question: `Sebuah lampu isyarat di sebuah persimpangan mempunyai waktu pembersihan (clearance time) sebanyak 5 saat antara setiap fasa. Jika jumlah tempoh kitaran adalah 100 saat, dan terdapat 3 fasa dalam sistem, berapakah tempoh maksimum yang boleh diperuntukkan untuk setiap fasa (termasuk waktu hijau dan kuning)?`,
     options: ['25 saat', '30 saat', '28.33 saat', '35 saat'],
     answer: '28.33 saat',

@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View, TextInput } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View, TextInput, Alert } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaProvider,useSafeAreaInsets } from 'react-native-safe-area-context'
 import { DEVICE_HEIGHT, DEVICE_WIDTH } from '../constants/DeviceDimention'
@@ -7,18 +7,18 @@ import Header from './Header';
 
 export default function Calculation({navigation}) {
 
-  const [jumlahKehilanganMasa, setJumlahKehilanganMasa] = useState(12);
-  const [masaKuning, setMasaKuning] = useState(4);
-  const [jumlahKitaranMasa, setJumlahKitaranMasa] = useState(90)
+  const [jumlahKehilanganMasa, setJumlahKehilanganMasa] = useState(0);
+  const [masaKuning, setMasaKuning] = useState(0);
+  const [jumlahKitaranMasa, setJumlahKitaranMasa] = useState(0)
 
-  const [kadarAlirTrafik1, setKadarAlirTrafik1] = useState(800);
-  const [kapasitiLane1, setKapasitiLane1] = useState(1000);
-  const [kadarAlirTrafik2, setKadarAlirTrafik2] = useState(1000);
-  const [kapasitiLane2, setKapasitiLane2] = useState(2000);
-  const [kadarAlirTrafik3, setKadarAlirTrafik3] = useState(1200);
-  const [kapasitiLane3, setKapasitiLane3] = useState(2200);
-  const [kadarAlirTrafik4, setKadarAlirTrafik4] = useState(2200);
-  const [kapasitiLane4, setKapasitiLane4] = useState(1200);
+  const [kadarAlirTrafik1, setKadarAlirTrafik1] = useState(0);
+  const [kapasitiLane1, setKapasitiLane1] = useState(0);
+  const [kadarAlirTrafik2, setKadarAlirTrafik2] = useState(0);
+  const [kapasitiLane2, setKapasitiLane2] = useState(0);
+  const [kadarAlirTrafik3, setKadarAlirTrafik3] = useState(0);
+  const [kapasitiLane3, setKapasitiLane3] = useState(0);
+  const [kadarAlirTrafik4, setKadarAlirTrafik4] = useState(0);
+  const [kapasitiLane4, setKapasitiLane4] = useState(0);
 
 
   let Y1 = 0;
@@ -64,6 +64,30 @@ export default function Calculation({navigation}) {
   }
 
   const calculationMasaMerah = () => {
+
+     // List of fields with their labels for better alerts
+    const fields = [
+      { value: jumlahKehilanganMasa, label: "Jumlah Kehilangan Masa" },
+      { value: jumlahKitaranMasa, label: "Jumlah Kitaran Masa" },
+      { value: masaKuning, label: "Masa Kuning" },
+      { value: kadarAlirTrafik1, label: "Kadar Alir Trafik Laluan 1" },
+      { value: kapasitiLane1, label: "Kapasiti Laluan 1" },
+      { value: kadarAlirTrafik2, label: "Kadar Alir Trafik Laluan 2" },
+      { value: kapasitiLane2, label: "Kapasiti Laluan 2" },
+      { value: kadarAlirTrafik3, label: "Kadar Alir Trafik Laluan 3" },
+      { value: kapasitiLane3, label: "Kapasiti Laluan 3" },
+      { value: kadarAlirTrafik4, label: "Kadar Alir Trafik Laluan 4" },
+      { value: kapasitiLane4, label: "Kapasiti Laluan 4" },
+    ];
+
+    // Check if all fields are filled and are numbers
+    for (let field of fields) {
+      if (field.value === '' || isNaN(Number(field.value)) || field.value === 0) {
+        Alert.alert("Input Error", `Sila masukkan nilai nombor yang sah untuk "${field.label}".`);
+        return;
+      }
+    }
+
     calculationMasaHijau()
     masaMerahLaluan1 = Number(jumlahKitaranMasa) - (Number(masaHijauLaluan1) + Number(masaKuning));
     masaMerahLaluan2 = Number(jumlahKitaranMasa) - (Number(masaHijauLaluan2) + Number(masaKuning));

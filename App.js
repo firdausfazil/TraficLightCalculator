@@ -10,6 +10,7 @@ import Calculation from './src/screen/Calculation';
 import Notes from './src/screen/Notes';
 import MainQuiz from './src/screen/MainQuiz';
 import Animation from './src/screen/Animation';
+import TestAnimation from './src/screen/TestAnimation';
 
 
 const Stack = createNativeStackNavigator();
@@ -23,6 +24,7 @@ function RootStack() {
       <Stack.Screen name="Calculation" component={Calculation} />
       <Stack.Screen name="Notes" component={Notes} />
       <Stack.Screen name="Animation" component={Animation} />
+      <Stack.Screen name="Animation2" component={TestAnimation} />
     </Stack.Navigator>
   );
 }
