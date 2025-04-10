@@ -8,6 +8,7 @@ import {
   Alert,
   KeyboardAvoidingView,
   ScrollView,
+  Platform,
 } from 'react-native';
 import React, {useState} from 'react';
 import {
@@ -141,13 +142,21 @@ export default function Calculation({navigation}) {
 		<SafeAreaProvider style={{flex: 1}}>
 		<Header />
 
+		
+		<KeyboardAvoidingView
+			behavior={Platform.OS === 'ios' ? 'height' : 'height'}
+			style={{flex: 1}}
+			keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 0} // Adjust offset as needed
+		>
 		<ScrollView
-			keyboardDismissMode='interactive'
-			style={{
-				height: DEVICE_HEIGHT * 0.6,
-				paddingVertical: DEVICE_HEIGHT * 0.02,
-				paddingHorizontal: DEVICE_WIDTH * 0.05,
-			}}>
+			keyboardDismissMode="interactive"
+			keyboardShouldPersistTaps="handled"
+			contentContainerStyle={{
+			  paddingVertical: DEVICE_HEIGHT * 0.02,
+			  paddingHorizontal: DEVICE_WIDTH * 0.05,
+			}}
+			style={{flexGrow: 1}}
+		>
 			{/* ALL field */}
 			<Text style={{fontSize: DEVICE_HEIGHT * 0.02, fontWeight: 'bold'}}>
 			Sila lengkapkan maklumat di bawah:
@@ -262,6 +271,7 @@ export default function Calculation({navigation}) {
 			</View>
 			</View>
 		</ScrollView>
+		</KeyboardAvoidingView>
 
 		<View
 			style={{

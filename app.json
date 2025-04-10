@@ -8,6 +8,13 @@
     },
     "ios": {
       "bundleIdentifier": "com.firdausfazil.tlcalculator"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2fd8c7a2-a3ef-4e25-be0c-fcdec7322177"
+      }
+    },
+    "owner": "firdausfazil",
+    "slug": "traficlightcalculator"
   }
 }
